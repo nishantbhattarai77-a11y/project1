@@ -40,6 +40,10 @@
       .orb.one { top: -15rem; left: -10rem; background: #913cff; }
       .orb.two { right: -13rem; bottom: -14rem; background: #00c7e9; animation-delay: -4s; }
 
+      nav { position: absolute; top: 1.5rem; left: 50%; z-index: 1; display: flex; gap: .35rem; padding: .35rem; border: 1px solid rgb(255 255 255 / 16%); border-radius: 999px; background: rgb(18 12 42 / 55%); backdrop-filter: blur(12px); transform: translateX(-50%); }
+      nav a { padding: .5rem .85rem; border-radius: 999px; color: var(--muted); font-size: .85rem; font-weight: 700; text-decoration: none; }
+      nav a:hover, nav a[aria-current="page"] { background: rgb(255 255 255 / 14%); color: var(--ink); }
+
       main {
         position: relative;
         width: min(92vw, 760px);
@@ -104,6 +108,11 @@
     </style>
   </head>
   <body>
+    <nav aria-label="Main navigation">
+      <a href="hello-world.html" aria-current="page">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
     <div class="orb one" aria-hidden="true"></div>
     <div class="orb two" aria-hidden="true"></div>
     <main>
